@@ -85,6 +85,9 @@ const Container = styled.header`
   @media screen and (max-width: 1170px) {
     max-width: 95%;
   }
+  @media screen and (max-width: 1170px) {
+    min-width: 95%;
+  }
 `;
 
 const NavbarWrap = styled.div`
@@ -112,6 +115,9 @@ const SearchBar = styled.div`
   height: fit-content;
   margin-right: 20px;
   position: relative;
+  @media screen and (max-width: 430px) {
+    margin-right: 5px;
+  }
 `;
 
 const SearchButton = styled.button`
@@ -128,6 +134,10 @@ const SearchButton = styled.button`
   color: #ffffff;
   background-color: transparent;
   pointer-events: painted;
+  z-index: 1000;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
   &:focus ~ input {
     width: 300px;
     right: 50px;
@@ -135,6 +145,19 @@ const SearchButton = styled.button`
     background-color: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  }
+  @media screen and (max-width: 830px) {
+    &:focus ~ input {
+      width: 290px;
+      right: 10px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    &:focus ~ input {
+      width: 196px;
+      right: 10px;
+      border-radius: 0px;
+    }
   }
 `;
 
@@ -167,7 +190,21 @@ const SearchInput = styled.input`
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 855px) {
+    &:focus {
+      width: 320px;
+      right: 5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+    }
+  }
+  @media screen and (max-width: 530px) {
+    &:focus {
+      width: 200px;
+      right: 5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+    }
   }
 `;
 
@@ -185,6 +222,9 @@ const FilterButton = styled.button`
   &:hover,
   &:focus {
     background-color: rgba(255, 255, 255, 0.3);
+  }
+  @media screen and (max-width: 450px) {
+    margin-right: 5px;
   }
 `;
 

@@ -39,7 +39,7 @@ const Background = styled.div`
 
 const Container = styled.div`
   border-radius: 10px;
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.4);
   display: flex;
   position: relative;
