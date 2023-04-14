@@ -134,6 +134,10 @@ const SearchButton = styled.button`
   color: #ffffff;
   background-color: transparent;
   pointer-events: painted;
+  z-index: 1000;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
   &:focus ~ input {
     width: 300px;
     right: 50px;
@@ -141,6 +145,19 @@ const SearchButton = styled.button`
     background-color: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  }
+  @media screen and (max-width: 830px) {
+    &:focus ~ input {
+      width: 290px;
+      right: 10px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    &:focus ~ input {
+      width: 196px;
+      right: 10px;
+      border-radius: 0px;
+    }
   }
 `;
 
